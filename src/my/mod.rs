@@ -13,6 +13,9 @@ pub fn func3(){
    let u1=U1{
        name:String::from("狗的不行的rust"),
    };
+   u1.age();
+
+   println!("rust的名称 age {}",u1.age());
    u1.hello();
 
    let u2=U2{
@@ -27,6 +30,12 @@ pub struct U1 {
     pub name:String,
 
 } 
+
+impl U1 {
+    fn age(&self) -> i32 {
+        return 20;
+    }
+}
 
 impl Say for U1 {
     fn name(&self) -> String {
