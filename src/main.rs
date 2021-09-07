@@ -1,13 +1,10 @@
-mod my;
+mod v;
 
 fn main() {
-    let mut a=20;
-    let  b=30;
-    my::func1(&mut a);
-    my::func2::<&mut i32>(&mut a);
-
-    my::func3();
-    println!("{},{}",a,b);
+    let p= v::P{
+            name:String::from("用户名"),
+    };
+    println!("{}", p.name());
 }
 
 
